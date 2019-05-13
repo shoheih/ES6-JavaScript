@@ -1,12 +1,16 @@
-var users = [
-    { name: '太郎' },
-    { name: '次郎' },
-    { name: '三郎' },
-    { name: '次郎' }
+var computers = [
+    { name: 'Apple', ram: 24 },
+    { name: 'Compaq', ram: 4 },
+    { name: 'Acer', ram: 32 }
 ];
 
-var user = users.find(function(user) {
-    return user.name == '次郎';
+var allComputersCanRun = computers.every(function(computer) {
+    return computer.ram >= 16;
 });
 
-console.log({user});
+var someComputersCanRun = computers.some(function(computer) {
+    return computer.ram >= 16;
+})
+
+console.log({ allComputersCanRun });
+console.log({ someComputersCanRun });

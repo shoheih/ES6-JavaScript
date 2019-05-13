@@ -1,14 +1,26 @@
-var posts = [
-    { id: 1, title: '古い投稿' },
-    { id: 2, title: '新しい投稿' }
-];
-
-var comment = { postId: 2, content: 'イイネ！' }
-
-function postForComment(posts, comment) {
-    return posts.find(function(post) {
-        return post.id === comment.postId;
-    });
+function Field(value) {
+    this.value = value;
 }
 
-console.log(postForComment(posts, comment));
+Field.prototype.validate = function() {
+    return this.value.length > 0;
+}
+
+var username = new Field('my_username');
+var password = new Field('my_password');
+var birthday = new Field('2010/10/10');
+
+var fields = [
+    username,
+    password
+];
+
+var formIsValid = fields.every(function(field) {
+    return field.validate();
+});
+
+if (formIsValid) {
+    // サーバーにリクエストを投げる
+} else {
+    // エラーを表示する
+}

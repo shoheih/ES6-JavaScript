@@ -1,15 +1,13 @@
-function Car(model) {
-    this.model = model;
-}
-
-var cars = [
-    new Car('プリウス'),
-    new Car('ノート'),
-    new Car('アクア')
+var names = [
+    'けん',
+    'はなこ',
+    'そういちろう'
 ];
 
-var car = cars.find(function(car) {
-    return car.model === 'アクア';
+names.every(function(name) {
+    return name.length >= 3;
 });
 
-console.log(car);
+names.some(function(name) {
+    return name.length >= 3;
+});
