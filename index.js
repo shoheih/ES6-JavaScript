@@ -1,16 +1,7 @@
-var computers = [
-    { name: 'Apple', ram: 24 },
-    { name: 'Compaq', ram: 4 },
-    { name: 'Acer', ram: 32 }
-];
+var numbers = [10, 20, 30];
 
-var allComputersCanRun = computers.every(function(computer) {
-    return computer.ram >= 16;
-});
+var sum = numbers.reduce(function(sum, number) {
+    return sum + number;
+}, 0);
 
-var someComputersCanRun = computers.some(function(computer) {
-    return computer.ram >= 16;
-})
-
-console.log({ allComputersCanRun });
-console.log({ someComputersCanRun });
+console.log({ sum });

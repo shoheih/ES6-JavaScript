@@ -1,13 +1,18 @@
-var names = [
-    'けん',
-    'はなこ',
-    'そういちろう'
+var primaryColors = [
+    { color: 'red' },
+    { color: 'yellow' },
+    { color: 'blue' }
 ];
 
-names.every(function(name) {
-    return name.length >= 3;
+var reduceArray = primaryColors.reduce(function(previous, primaryColor) {
+    previous.push(primaryColor.color);
+    return previous;
+}, []);
+
+
+var mapArray = primaryColors.map(function(primaryColor) {
+    return primaryColor.color;
 });
 
-names.some(function(name) {
-    return name.length >= 3;
-});
+console.log({reduceArray});
+console.log({mapArray});
