@@ -1,7 +1,13 @@
-var numbers = [10, 20, 30];
+//var name = '太郎';
+//var title = 'Webアプリケーションエンジニア';
+//var hourlySalary = 4000;
 
-var sum = numbers.reduce(function(sum, number) {
-    return sum + number;
-}, 0);
+// ES6
+const name = '太郎';
+let title = 'Webアプリケーションエンジニア';
+let hourlySalary = 4000;
 
-console.log({ sum });
+// 時間が経過したとして・・・
+
+title = 'リードWebアプリケーションエンジニア';
+hourlySalary = 20000;

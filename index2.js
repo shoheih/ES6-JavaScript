@@ -1,18 +1,17 @@
-var primaryColors = [
-    { color: 'red' },
-    { color: 'yellow' },
-    { color: 'blue' }
-];
+function count(targetString) {
+    const characters = ['a', 'e', 'i', 'o', 'u'];
+    let number = 0;
 
-var reduceArray = primaryColors.reduce(function(previous, primaryColor) {
-    previous.push(primaryColor.color);
-    return previous;
-}, []);
+    for (var i = 0; i < targetString.length; i++) {
+        if (characters.includes(targetString[i])) {
+            number++;
+        }
+    }
 
+    return number;
+}
 
-var mapArray = primaryColors.map(function(primaryColor) {
-    return primaryColor.color;
-});
+console.log(count('afjldajeuroeaujlouoreua'));
+console.log(count('auild'));
 
-console.log({reduceArray});
-console.log({mapArray});
+// どれだけ意図をコードの中に入れることができるのか
