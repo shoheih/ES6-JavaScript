@@ -1,5 +1,3 @@
-function getMessage() {
-    return `今年は${new Date().getFullYear()}年です。`;
-}
+const add = (a, b) => a + b;
 
-console.log(getMessage());
+console.log(add(1, 2));
