@@ -1,21 +1,9 @@
-function createBookShop(inventory) {
-    return {
-        inventory,
-        inventoryValue() {
-            return this.inventory.reduce((total, book) => total + book.price, 0);
-        },
-        priceForTitle(title) {
-            return this.inventory.find(book => book.title === title).price;
-        }
-    };
+function makeAjaxRequest(url, method = 'GET') {
+    // ajaxリクエストをするロジックがここにあると想定
+    return method;
 }
 
-const inventory = [
-    { title: 'ハリーポッター', price: 1000 },
-    { title: 'JavaScript入門', price: 1500 }
-];
-
-const bookShop = createBookShop(inventory);
-
-console.log(bookShop.inventoryValue());
-console.log(bookShop.priceForTitle('ハリーポッター'));
+console.log(makeAjaxRequest('google.com'));
+console.log(makeAjaxRequest('google.com', null));
+console.log(makeAjaxRequest('google.com', undefined));
+console.log(makeAjaxRequest('google.com', 'POST'));
