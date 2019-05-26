@@ -1,9 +1,7 @@
-function makeAjaxRequest(url, method = 'GET') {
-    // ajaxリクエストをするロジックがここにあると想定
-    return method;
+function addNumbers(...numbers) {
+    return numbers.reduce((sum, number) => {
+        return sum + number;    
+    }, 0);
 }
 
-console.log(makeAjaxRequest('google.com'));
-console.log(makeAjaxRequest('google.com', null));
-console.log(makeAjaxRequest('google.com', undefined));
-console.log(makeAjaxRequest('google.com', 'POST'));
+console.log(addNumbers(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));

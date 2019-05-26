@@ -1,17 +1,10 @@
-function User(id = generateId()) {
-    this.id = id;
-}
+const companies = [
+    'Google',
+    'Facebook',
+    'Uber'
+];
 
-function generateId() {
-    return Math.random() * 999999;
-}
+const [ name, ...rest ] = companies;
 
-function createAdminUser(user = new User(generateId())) {
-    user.admin = true;
-
-    return user;
-}
-
-console.log(createAdminUser());
-const user = new User();
-console.log(createAdminUser(user));
+console.log(name);
+console.log(rest);
