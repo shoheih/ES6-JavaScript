@@ -1,7 +1,10 @@
-function addNumbers(...numbers) {
-    return numbers.reduce((sum, number) => {
-        return sum + number;    
-    }, 0);
-}
+promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject();
+    }, 3000);
+});
 
-console.log(addNumbers(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+promise
+    .then(() => console.log('処理が完了しました！'))
+    .then(() => console.log('ここも実行されるよ！'))
+    .catch(() => console.log('問題発生!!'));
