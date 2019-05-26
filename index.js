@@ -1,10 +1,5 @@
-promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        reject();
-    }, 3000);
-});
+url = "https://jsonplaceholder.typicode.com/posts";
 
-promise
-    .then(() => console.log('処理が完了しました！'))
-    .then(() => console.log('ここも実行されるよ！'))
-    .catch(() => console.log('問題発生!!'));
+fetch(url)
+    .then(response => console.log(response))
+    .catch(error => console.log('問題発生!!!!', error))
